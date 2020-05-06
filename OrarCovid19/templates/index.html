@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Urmatoarele Cursuri Online</h1>
+</div>
+
+<div class="container">
+    {% for ora in ore %}
+        <h1>{{ora.subject}}</h1>
+    {% endfor %}
+</div>
+{% endblock %}

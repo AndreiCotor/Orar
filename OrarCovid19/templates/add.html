@@ -1,0 +1,34 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Adauga</h1>
+</div>
+
+<div class="container">
+    <form method="POST" action="">
+        {{form.hidden_tag()}}
+
+        <fieldset class="form-group">
+            <div class="form-group">
+                {{form.Password.label(class="form-control-label")}}
+                {{form.Password(class="form-control form-control-lg")}}
+            </div>
+            <div class="form-group">
+                {{form.Materie.label(class="form-control-label")}}
+                {{form.Materie(class="form-control form-control-lg")}}
+            </div>
+            <div class="form-group">
+                {{form.start_date.label(class="form-control-label")}}
+                {{form.start_date(class="form-control form-control-lg")}}
+            </div>
+        </fieldset>
+
+        <div class="form-group">
+            {{form.submit(class="btn btn-outline-info")}}
+        </div>
+    </form>
+</div>
+
+{% endblock %}
